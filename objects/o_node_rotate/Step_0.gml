@@ -1,0 +1,1 @@
+//+	"\nfps:" + string(fps) + ",cpu-step=" + string(fps_real));
