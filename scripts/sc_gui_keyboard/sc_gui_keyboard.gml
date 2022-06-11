@@ -14,7 +14,7 @@ function sc_gui_keyboard_impl() constructor
 		keyboard_input_observer_press[@ i] = ds_list_create();
 		keyboard_input_observer_release[@ i] = ds_list_create();
 	}
-	// 注册时间后会通知，然后自行处理按键
+
 	static observe = sc_gui_keyboard_observe;
 
 	static destroy = function()
@@ -93,14 +93,10 @@ function sc_gui_keyboard_impl() constructor
 function sc_gui_keyboard_observe()
 {
 	exit;
-	
-	// FIX IT http("") and vm last(-1)
+	// http("") and vm last(-1)
 	var _lastkey = keyboard_lastkey;
-	keyboard_lastkey = ""; // keep yy sample value
-	// query array
-	// delete pos, 
-	// insert 0,
-	if (is_numeric(_lastkey)) {
+	keyboard_lastkey = -1;
+	if (is_numeric(_lastkey) && _lastkey != -1) {
 		// sc_assert(_lastkey <= keyboard_max_value, "keyboard lastkey too large:" + string(_lastkey));
 		if (keyboard_input_status[_lastkey]) {
 			var _idx = ds_list_find_index(keyboard_input_record, _lastkey);
@@ -111,7 +107,6 @@ function sc_gui_keyboard_observe()
 		keyboard_input_status[_lastkey] = 1;
 	}
 
-	// 先遍历，清楚状态
 	var n = ds_list_size(keyboard_input_record);
 	var i = 0;
 	while (i < n)
