@@ -17,7 +17,7 @@ function sc_gui_window_construct()
 /// @description	constructor gui window config in global
 function sc_gui_window_config_construct() {
 	var _class = {cid : GUI_CLASS.WINDOW, inherit : GUI_CLASS.DEFAULT};
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		flag_hover_hole : true,
 		flag_scale : GUI_AXIS_TYPE.BOTH,
 		flex_algin : GUI_FLEX_ALIGN.STRETCH,

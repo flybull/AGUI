@@ -1,0 +1,1 @@
+sc_gui_node_event_delete_by_obj(node);

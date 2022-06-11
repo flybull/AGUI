@@ -57,7 +57,7 @@ function sc_gui_animation_class_construct() {
 function sc_gui_config_attr_parse_syn_animation()
 {
 	var _class = {cid : GUI_CLASS.ANIMATION, inherit : GUI_CLASS.ANIMATION};
-	sc_gui_config_set_attr_parse(_class, ["hover", "hold", "press", "focus", "any"], function(__attr, __name, __realname, __self) {
+	sc_gui_config_attr_parse_set(_class, ["hover", "hold", "press", "focus", "any"], function(__attr, __name, __realname, __self) {
 		var _values = variable_struct_get(__attr, __name);
 		var _exclude = variable_struct_get(_values, "exclude");
 		_exclude = is_undefined(_exclude) ? false : _exclude;
@@ -75,7 +75,7 @@ function sc_gui_config_attr_parse_syn_animation()
 		trigger = _exclude ? (trigger & (~_status)) : (trigger | _status);
 		sc_gui_config_syn_add_other_attr_value(self, _values);
 	});
-	sc_gui_config_set_attr_parse(_class, ["path", "size", "scale", "rotate", "color", "alpha"], function(__attr, __name, __realname, __self) {
+	sc_gui_config_attr_parse_set(_class, ["path", "size", "scale", "rotate", "color", "alpha"], function(__attr, __name, __realname, __self) {
 		var _values = variable_struct_get(__attr, __name);
 		var _idx;
 		switch (__name) {
@@ -158,7 +158,7 @@ function sc_gui_config_attr_parse_syn_animation_prop()
 	var _class = {cid : GUI_CLASS.ANIMATION_PROP, inherit : GUI_CLASS.ANIMATION_PROP};
 	sc_gui_config_set_attr_parse_struct(_class, 
 		["oid", "delay", "times", "duration", "loops"]);
-	sc_gui_config_set_attr_parse(_class, "formula",function(__attr, __name, __realname, __self) {
+	sc_gui_config_attr_parse_set(_class, "formula",function(__attr, __name, __realname, __self) {
 		var _func = variable_struct_get(__attr, __name);
 		formula = method(undefined, _func);
 	});

@@ -16,7 +16,7 @@ function sc_gui_drag_construct()
 function sc_gui_drag_config_construct() {
 	var _class = {cid : GUI_CLASS.DRAG, inherit : GUI_CLASS.DEFAULT };
 	sc_gui_config_attr_alias_set(_class, "uri", "drag_uri");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		h : 32,
 		flag_stretch : true,
 		drag_uri: "/self",

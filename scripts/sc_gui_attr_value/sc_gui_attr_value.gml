@@ -173,11 +173,11 @@ function sc_gui_config_attr_value_clone(__self)
 function sc_gui_config_syn_attr_value(__self_attr)
 {
 	with (__self_attr) {
-		var _value = sc_gui_config_get_attr_value(self);
+		var _value = sc_gui_config_attr_value_get(self);
 		var _names = variable_struct_get_names(_value);
 		for (var i = 0; i < array_length(_names); ++i) {
 			var _realname = sc_gui_config_attr_alias_get(self, _names[i]);
-			var _parse = sc_gui_config_get_attr_parse(self, 
+			var _parse = sc_gui_config_attr_parse_get(self, 
 				is_undefined(_realname) ? _names[i] : _realname);
 			if (!is_undefined(_parse)) {
 				_parse(_value, _names[i], _realname, self);
@@ -223,7 +223,7 @@ function sc_gui_config_syn_add_other_attr_value(__self_attr, __attr)
 			var _names = variable_struct_get_names(__attr);
 			for (var i = 0; i < array_length(_names); ++i) {
 				var _realname = sc_gui_config_attr_alias_get(self, _names[i]);
-				var _parse = sc_gui_config_get_attr_parse(self,
+				var _parse = sc_gui_config_attr_parse_get(self,
 					is_undefined(_realname) ?_names[i] : _realname);
 				if (!is_undefined(_parse)) {
 					_parse(__attr, _names[i], _realname, self);
@@ -237,23 +237,23 @@ function sc_gui_config_syn_add_other_attr_value(__self_attr, __attr)
 	}
 }
 
-/// @function:		sc_gui_config_set_attr_value(__self, __attr) 
+/// @function:		sc_gui_config_attr_value_set(__self, __attr) 
 /// @description:	Gui config_func node set attribute value.
 /// @param:         {__self} {struct : {cid : GUI_CLASS, inherit: GUI_CLASS}
 /// @param:         {__attr}     {struct} attribute value
-function sc_gui_config_set_attr_value(__self, __attr)
+function sc_gui_config_attr_value_set(__self, __attr)
 {
 	gml_pragma("forceinline");
-	sc_assert(is_struct(__attr), "[sc_gui_config_set_attr_value] attr type error!");
+	sc_assert(is_struct(__attr), "[sc_gui_config_attr_value_set] attr type error!");
 	var _value = sc_gui_global_config_get(global.gui.config_attr_value, 
 		global.gui_preload.factor_attr_value, __self);
 	sc_gui_config_syn_add_other_attr_value(_value, __attr);
 }
 
-/// @function:		sc_gui_config_get_attr_value(__self) 
+/// @function:		sc_gui_config_attr_value_get(__self) 
 /// @description:	Gui config_func node get attribute value.
 /// @param:         {__self} {struct : {cid : GUI_CLASS, inherit: GUI_CLASS} (array or value)
-function sc_gui_config_get_attr_value(__self)
+function sc_gui_config_attr_value_get(__self)
 {
 	gml_pragma("forceinline");
 	return sc_gui_global_config_get(global.gui.config_attr_value, 
@@ -265,7 +265,7 @@ function sc_gui_config_get_attr_value(__self)
 /// @param:         {__classid} {real or GUI_CLASS} class id
 /// @param:         {__inherit} {real or GUI_CLASS} inherit class id
 function sc_gui_config_attr_value0(__classid, __inherit) constructor {
-	var _value = sc_gui_config_get_attr_value({cid : __inherit, inherit : GUI_CLASS.DEFAULT});
+	var _value = sc_gui_config_attr_value_get({cid : __inherit, inherit : GUI_CLASS.DEFAULT});
 	/*class id*/
 	cid = __classid;
 	inherit = _value.inherit;

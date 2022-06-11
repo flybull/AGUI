@@ -27,7 +27,7 @@ function sc_gui_selector_construct()
 /// @description	constructor gui selector config in global
 function sc_gui_selector_config_construct() {
 	var _class = {cid : GUI_CLASS.SELECTOR, inherit : GUI_CLASS.DEFAULT };
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		fid: "0",
 		flag_stretch : true,
 		func_on_ready : sc_gui_selector_on_ready,
@@ -41,7 +41,7 @@ function sc_gui_selector_config_construct() {
 /// @description	constructor gui selector_list config in global
 function sc_gui_selector_list_config_construct() {
 	var _class0 = {cid : GUI_CLASS.SELECTOR_LIST, inherit : GUI_CLASS.DEFAULT };
-	sc_gui_config_set_attr_value(_class0, {
+	sc_gui_config_attr_value_set(_class0, {
 		fid: "1",
 		max_height : 64,
 		flag_visable: false,
@@ -57,7 +57,7 @@ function sc_gui_selector_list_config_construct() {
 /// @description	constructor gui selector config in global
 function sc_gui_selector_elem_config_construct() {
 	var _class1 = {cid : GUI_CLASS.SELECTOR_ELEM, inherit : GUI_CLASS.DEFAULT };
-	sc_gui_config_set_attr_value(_class1, {
+	sc_gui_config_attr_value_set(_class1, {
 		flag_stretch : true,
 		func_on_release : sc_gui_selector_elem_on_press,
 	});

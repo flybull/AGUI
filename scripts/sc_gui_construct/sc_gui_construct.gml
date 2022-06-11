@@ -136,7 +136,7 @@ function sc_gui_global_config_get(__config, __factor, __self)
 		_value = ds_map_find_value(__config[@ GUI_CLASS.MAX], _classid);
 	}
 	if (is_undefined(_value)) {
-		// Fix it: sc_gui_config_get_attr_value sc_gui_config_get_attr_parse
+		// Fix it: sc_gui_config_attr_value_get sc_gui_config_attr_parse_get
 		// Inheritance is not yet implemented
 		if (is_undefined(__factor)) {
 			return __config[GUI_CLASS.DEFAULT];

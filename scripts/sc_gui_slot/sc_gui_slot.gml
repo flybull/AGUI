@@ -16,7 +16,7 @@
 //function sc_gui_hide_config_construct() {
 //	var _class = {cid : GUI_CLASS.HIDE, inherit : GUI_CLASS.DEFAULT };
 //	sc_gui_config_attr_alias_set(_class, "uri", "hide_uri");
-//	sc_gui_config_set_attr_value(_class, {
+//	sc_gui_config_attr_value_set(_class, {
 //		w: 16, h : 16,
 //		hide_uri: "/parent",
 //		hide_status : false,

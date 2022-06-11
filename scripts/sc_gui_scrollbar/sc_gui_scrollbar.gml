@@ -18,7 +18,7 @@ function sc_gui_scrollbar_construct()
 function sc_gui_scrollbar_config_construct()
 {
 	var _class = {cid : GUI_CLASS.SCROLLBAR, inherit : GUI_CLASS.DEFAULT};
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		direct : GUI_FLEX_DIRECT.NONE,
 		attr_shape : undefined,
 		scrollbar_px : 6,

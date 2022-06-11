@@ -22,7 +22,7 @@ function sc_gui_tree_construct()
 /// @description	constructor gui tree config in global
 function sc_gui_tree_config_construct() {
 	var _class = {cid : GUI_CLASS.TREE, inherit : GUI_CLASS.DEFAULT};
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		tree_exhibits : false,
 		flag_stretch : true,
 		flag_hover_hole : true,
@@ -37,12 +37,12 @@ function sc_gui_tree_config_construct() {
 function sc_gui_tree_elem_config_construct()
 {
 	var _class_elem = {cid : GUI_CLASS.TREE_ELEM, inherit : GUI_CLASS.DEFAULT};
-	sc_gui_config_set_attr_parse(_class_elem, ["str", "text_str", "txt"], function(__attr, __name, __realname, __self) {
+	sc_gui_config_attr_parse_set(_class_elem, ["str", "text_str", "txt"], function(__attr, __name, __realname, __self) {
 		var _str = variable_struct_get(__attr, __name);
 		sc_gui_text({str : _str, flex_algin: GUI_FLEX_ALIGN.CENTER, 
 			flex_justify: GUI_FLEX_ALIGN.START, flag_hover_hole : true});
 	});
-	sc_gui_config_set_attr_value(_class_elem, {
+	sc_gui_config_attr_value_set(_class_elem, {
 		flag_stretch : true,
 		func_on_begin : sc_gui_tree_elem_on_init,
 	});

@@ -29,7 +29,7 @@ function sc_gui_text_class_construct() {
 		"text_w", "text_angle", "text_font", "text_col"],
 	);
 
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		// private
 		// struct { val:string ...}
 		text_str : undefined,

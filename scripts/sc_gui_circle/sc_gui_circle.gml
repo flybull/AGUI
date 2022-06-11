@@ -18,7 +18,7 @@ function sc_gui_circle_config_construct()
 	var _class = {cid : GUI_CLASS.CIRCLE, inherit : GUI_CLASS.DEFAULT};
 	sc_gui_config_attr_alias_set(_class, "indicat", "circle_indicat");
 	sc_gui_config_attr_alias_set(_class, "color", "circle_color");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		circle_indicat : GUI_THEME.INDICAT_COLOR_WARN,
 		circle_color : undefined,
 		circle_radius : 0,

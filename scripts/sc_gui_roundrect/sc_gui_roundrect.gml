@@ -22,7 +22,7 @@ function sc_gui_roundrect_config_construct()
 	sc_gui_config_attr_alias_set(_class, "xrad", "roundrect_xrad");
 	sc_gui_config_attr_alias_set(_class, "yrad", "roundrect_yrad");
 	sc_gui_config_attr_alias_set(_class, "color", "roundrect_color");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		roundrect_indicat : GUI_THEME.INDICAT_COLOR_WARN,
 		roundrect_rad  : 8,
 		roundrect_xrad : 0.3,

@@ -19,7 +19,7 @@ function sc_gui_checkbox_construct()
 /// @description	constructor gui select bar config in global
 function sc_gui_scheckbox_config_construct() {
 	var _class = {cid : GUI_CLASS.SCHECKBOX, inherit : GUI_CLASS.DEFAULT};
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		select_hit : undefined, 
 		//attr_shape : undefined,
 		padding : 8, span_w : 4, span_h : 4,
@@ -33,7 +33,7 @@ function sc_gui_scheckbox_config_construct() {
 /// @description	constructor gui select bar config in global
 function sc_gui_mcheckbox_config_construct() {
 	var _class = {cid : GUI_CLASS.MCHECKBOX, inherit : GUI_CLASS.DEFAULT};
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		padding : 8, span_w : 4, span_h : 4,
 		attr_shape : undefined,
 		flag_stretch : true,

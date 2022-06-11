@@ -11,7 +11,7 @@ var estamp;
 bstamp = current_time;
 var n = 10000;
 for (var i = 0; i < 10000; i++) {
-	sc_gui_config_get_attr_parse({
+	sc_gui_config_attr_parse_get({
 		cid : GUI_CLASS.DEFAULT, 
 		inherit : GUI_CLASS.DEFAULT
 	}, "cid")({ empty : 1 }, "empty");
@@ -22,7 +22,7 @@ show_debug_message("use:" + string(n * 1000 / (bstamp - estamp)) + "/s.");
 
 bstamp = current_time;
 for (var i = 0; i < 10000; i++) {
-	sc_gui_config_get_attr_parse({
+	sc_gui_config_attr_parse_get({
 		cid : GUI_CLASS.DEFAULT, 
 		inherit : GUI_CLASS.DEFAULT
 	}, "empty")({ empty : 1 }, "empty");

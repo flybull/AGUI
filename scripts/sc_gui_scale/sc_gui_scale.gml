@@ -27,7 +27,7 @@ function sc_gui_scale_construct()
 /// @description	constructor gui scale config in global
 function sc_gui_scale_config_construct() {
 	var _class = {cid : GUI_CLASS.SCALE, inherit : GUI_CLASS.DEFAULT };
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		scale_x : 0,
 		scale_y : 0,
 		scale_px : 4,

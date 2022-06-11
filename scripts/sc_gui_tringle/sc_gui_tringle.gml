@@ -31,7 +31,7 @@ function sc_gui_triangle_config_construct()
 	sc_gui_config_attr_alias_set(_class, "indicat", "tri_indicat");
 	sc_gui_config_attr_alias_set(_class, "orient", "tri_orient");
 	sc_gui_config_attr_alias_set(_class, "color", "tri_color");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		tri_indicat : GUI_THEME.INDICAT_COLOR_WARN,
 		tri_orient : GUI_TRIANLE_ORIENT.DOWN,
 		tri_color : undefined,

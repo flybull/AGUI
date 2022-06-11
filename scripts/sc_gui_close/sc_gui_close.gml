@@ -16,7 +16,7 @@ function sc_gui_close_construct()
 function sc_gui_close_config_construct() {
 	var _class = {cid : GUI_CLASS.CLOSE, inherit : GUI_CLASS.DEFAULT };
 	sc_gui_config_attr_alias_set(_class, "uri", "close_uri");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		w: 16,h : 16,
 		close_uri: "/parent",
 		func_on_release : sc_gui_close_on_release,

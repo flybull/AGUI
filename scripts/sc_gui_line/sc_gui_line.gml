@@ -22,7 +22,7 @@ function sc_gui_line_config_construct()
 	sc_gui_config_attr_alias_set(_class, "width", "line_width");
 	sc_gui_config_attr_alias_set(_class, ["src", "src_uri"], "line_src_uri");
 	sc_gui_config_attr_alias_set(_class, ["dst", "dst_uri"], "line_dst_uri");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		line_indicat : GUI_THEME.INDICAT_COLOR_WARN,
 		line_color: undefined,
 		line_width : 2,

@@ -15,7 +15,7 @@ function sc_gui_sprite_construct()
 /// @description	constructor gui sprite config in global
 function sc_gui_sprite_config_construct() {
 	var _class = {cid : GUI_CLASS.SPRITE, inherit : GUI_CLASS.DEFAULT};
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		// public
 		sprite_id : -1,
 		sprite_idx : -1,

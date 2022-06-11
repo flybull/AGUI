@@ -22,7 +22,7 @@ function sc_gui_bezier_config_construct()
 	sc_gui_config_attr_alias_set(_class, "width", "bezier_width");
 	sc_gui_config_attr_alias_set(_class, ["src", "src_uri"], "bezier_src_uri");
 	sc_gui_config_attr_alias_set(_class, ["dst", "dst_uri"], "bezier_dst_uri");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		bezier_indicat : GUI_THEME.INDICAT_COLOR_WARN,
 		bezier_color: undefined,
 		bezier_width: 2,

@@ -16,7 +16,7 @@ function sc_gui_screen_construct()
 function sc_gui_screen_config_construct() {
 	var _class = {cid : GUI_CLASS.SCREEN, inherit : GUI_CLASS.DEFAULT };
 	sc_gui_config_attr_alias_set(_class, "uri", "screen_uri");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		screen_uri: "/parent",
 		screen_full : false,
 		screen_x: 0,

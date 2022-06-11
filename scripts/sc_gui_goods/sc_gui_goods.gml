@@ -28,7 +28,7 @@ function sc_gui_goods_construct()
 function sc_gui_goods_config_construct() {
 	var _class = {cid : GUI_CLASS.GOODS, inherit : GUI_CLASS.DEFAULT };
 	sc_gui_config_attr_alias_set(_class, "name", "goods_name");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		goods_slot_sid : undefined,
 		goods_type : undefined,
 		goods_name : "goods",
@@ -46,7 +46,7 @@ function sc_gui_goods_config_construct() {
 function sc_gui_goods_slot_config_construct() {
 	var _class = {cid : GUI_CLASS.GOODS_SLOT, inherit : GUI_CLASS.DEFAULT };
 	sc_gui_config_attr_alias_set(_class, "name", "goods_name");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		goods_name : "slot",
 		goods_type : undefined,
 		
@@ -64,7 +64,7 @@ function sc_gui_goods_shelf_config_construct() {
 	sc_gui_config_attr_alias_set(_class, ["row_col", "grc"], "shelf_rc");
 	sc_gui_config_attr_alias_set(_class, ["slot_wh", "gsz"], "shelf_sz");
 	sc_gui_config_attr_alias_set(_class, "name", "goods_name");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		goods_name : "shelf",
 		goods_type : undefined,
 		shelf_row_num : 0,
@@ -75,13 +75,13 @@ function sc_gui_goods_shelf_config_construct() {
 		flag_wrap: true,
 		flag_hover_hole : true,
 	});
-	sc_gui_config_set_attr_parse(_class, "shelf_rc", function(__attr, __name, __realname, __self) {
+	sc_gui_config_attr_parse_set(_class, "shelf_rc", function(__attr, __name, __realname, __self) {
 		var _val = sc_string_split("*", variable_struct_get(__attr, __name));
 		sc_assert(array_length(_val) == 2, "parse shelf_rc failed.");
 		shelf_row_num = int64(_val[0]);
 		shelf_col_num = int64(_val[1]);
 	});
-	sc_gui_config_set_attr_parse(_class, "shelf_sz", function(__attr, __name, __realname, __self) {
+	sc_gui_config_attr_parse_set(_class, "shelf_sz", function(__attr, __name, __realname, __self) {
 		var _val = sc_string_split("*", variable_struct_get(__attr, __name));
 		sc_assert(array_length(_val) == 2, "parse shelf_sz failed.");
 		shelf_slot_width = int64(_val[0]);

@@ -21,7 +21,7 @@ function sc_gui_slider_construct()
 /// @description	constructor gui slider config in global
 function sc_gui_slider_config_construct() {
 	var _class = {cid : GUI_CLASS.SLIDER, inherit : GUI_CLASS.DEFAULT };
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		//attr_shape : {type : "rect", border_visual : false},
 		padding : 0,
 		block_direct : GUI_FLEX_DIRECT.NONE,
@@ -39,7 +39,7 @@ function sc_gui_slider_config_construct() {
 function sc_gui_slider_cell_config_construct()
 {
 	var _class_cell = {cid : GUI_CLASS.SLIDER_CELL, inherit : GUI_CLASS.DEFAULT };
-	sc_gui_config_set_attr_value(_class_cell, {
+	sc_gui_config_attr_value_set(_class_cell, {
 		attr_shape : {type : "circle", backdrop_color : c_orange},
 		w: 8, h: 8,
 		margin_type : GUI_VALUE_TYPE.PERCENT,

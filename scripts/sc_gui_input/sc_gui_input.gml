@@ -15,7 +15,7 @@ function sc_gui_input_construct()
 /// @description	constructor gui input text config in global
 function sc_gui_input_config_construct() {
 	var _class = {cid : GUI_CLASS.INPUTBOX, inherit : GUI_CLASS.DEFAULT};
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		input_cursor_frame : 0,
 		input_cursor_blink : false,
 		input_string_limit : 8,

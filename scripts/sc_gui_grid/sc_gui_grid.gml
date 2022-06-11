@@ -17,7 +17,7 @@ function sc_gui_grid_config_construct() {
 	var _class = {cid : GUI_CLASS.GRID, inherit : GUI_CLASS.DEFAULT};
 	sc_gui_config_attr_alias_set(_class, ["row_col", "grc"], "grid_rc");
 	sc_gui_config_attr_alias_set(_class, ["slot_wh", "gsz"], "grid_sz");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		grid_row_num : 0,
 		grid_col_num : 0,
 		grid_slot_width : 64,
@@ -26,13 +26,13 @@ function sc_gui_grid_config_construct() {
 		flag_wrap: true,
 		flag_hover_hole : true,
 	});
-	sc_gui_config_set_attr_parse(_class, "grid_rc", function(__attr, __name, __realname, __self) {
+	sc_gui_config_attr_parse_set(_class, "grid_rc", function(__attr, __name, __realname, __self) {
 		var _val = sc_string_split("*", variable_struct_get(__attr, __name));
 		sc_assert(array_length(_val) == 2, "parse grid_rc failed.");
 		grid_row_num = int64(_val[0]);
 		grid_col_num = int64(_val[1]);
 	});
-	sc_gui_config_set_attr_parse(_class, "grid_sz", function(__attr, __name, __realname, __self) {
+	sc_gui_config_attr_parse_set(_class, "grid_sz", function(__attr, __name, __realname, __self) {
 		var _val = sc_string_split("*", variable_struct_get(__attr, __name));
 		sc_assert(array_length(_val) == 2, "parse grid_sz failed.");
 		grid_slot_width = int64(_val[0]);

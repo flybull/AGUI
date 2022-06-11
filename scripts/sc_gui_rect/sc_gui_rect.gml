@@ -20,7 +20,7 @@ function sc_gui_rect_config_construct()
 
 	sc_gui_config_attr_alias_set(_class, "indicat", "rect_indicat");
 	sc_gui_config_attr_alias_set(_class, "color", "rect_color");
-	sc_gui_config_set_attr_value(_class, {
+	sc_gui_config_attr_value_set(_class, {
 		rect_indicat : GUI_THEME.INDICAT_COLOR_WARN,
 		rect_color: undefined,
 		direct : GUI_FLEX_DIRECT.NONE,

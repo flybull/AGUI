@@ -61,6 +61,7 @@ enum GUI_CLASS {
 	GOODS_SLOT,
 	GOODS_SHELF,
 
+	EXAMPLE,
 	MAX,
 }
 
