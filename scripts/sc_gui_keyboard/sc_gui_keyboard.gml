@@ -93,11 +93,12 @@ function sc_gui_keyboard_impl() constructor
 function sc_gui_keyboard_observe()
 {
 	var _lastkey = keyboard_lastkey;
-	keyboard_lastkey = -1;
+	keyboard_lastkey = ""; // keep yy sample value
 	// query array
 	// delete pos, 
 	// insert 0,
-	if (_lastkey != -1) {
+	if (is_numeric(_lastkey)) {
+		// sc_assert(_lastkey <= keyboard_max_value, "keyboard lastkey too large:" + string(_lastkey));
 		if (keyboard_input_status[_lastkey]) {
 			var _idx = ds_list_find_index(keyboard_input_record, _lastkey);
 			ds_list_delete(keyboard_input_record, _idx);
