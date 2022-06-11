@@ -32,13 +32,13 @@ sc_gui_node_event_delete_by_obj(node);
 ```gml
 function sc_gui_{name}_construct()
 {
-	gml_pragma("global", "sc_gui_{name}_construct()");
-	var _classid = GUI_CLASS.{TYPE};
-	sc_gui_global_set_class_construct(
-		_classid, "{name}",
-		sc_gui_{name}_config_construct,
-		sc_gui_{name}
-	);
+    gml_pragma("global", "sc_gui_{name}_construct()");
+    var _classid = GUI_CLASS.{TYPE};
+    sc_gui_global_set_class_construct(
+        _classid, "{name}",
+        sc_gui_{name}_config_construct,
+        sc_gui_{name}
+    );
 }
 function sc_gui_{name}_config_construct()
 {
@@ -52,15 +52,15 @@ function sc_gui_{name}_config_construct()
     });
     // For parse function
     sc_gui_config_attr_parse_set(_class, "debug", function(__attr, __name, __realname, __self) {
-		var _val = variable_struct_get(__attr, __name);
+        var _val = variable_struct_get(__attr, __name);
         debug = string(_val);
     });
 }
 
 function sc_gui_{name}(__attr = undefined, __func_attach = undefined, __func_agrs = undefined)
 {
-	gml_pragma("forceinline");
-	return sc_gui_node(__attr, __func_attach, __func_agrs, GUI_CLASS.{TYPE});
+    gml_pragma("forceinline");
+    return sc_gui_node(__attr, __func_attach, __func_agrs, GUI_CLASS.{TYPE});
 }
 
 // In the object instance (create event)
