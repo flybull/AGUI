@@ -92,7 +92,6 @@ function sc_gui_keyboard_impl() constructor
 
 function sc_gui_keyboard_observe()
 {
-	exit;
 	// http("") and vm last(-1)
 	var _lastkey = keyboard_lastkey;
 	keyboard_lastkey = -1;

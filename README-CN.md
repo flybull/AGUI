@@ -15,6 +15,7 @@
 * tab
 * tree
 * windown
+* animation
 
 # 1. 如何使用
 1. `o_gui_impl` 将o_gui_impl房子放在instance层

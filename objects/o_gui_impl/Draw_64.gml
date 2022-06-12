@@ -43,5 +43,3 @@ sc_gui_global_queue_idempotent_unmark(function() {
 sc_gui_debug_draw_hover();
 #endregion
 
-
-draw_text(200, 200, "keyboard_lastkey:" + string(keyboard_lastkey) + "type:" + typeof(keyboard_lastkey));
