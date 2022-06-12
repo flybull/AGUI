@@ -1,5 +1,21 @@
 # AGUI
-A game maker GUI
+    A GAMEMAKER GUI
+---
+# SUPPORT
+* button
+* drag
+* scale
+* scrollbar
+* checkbox
+* grid
+* goods
+* input
+* selector
+* slider
+* tab
+* tree
+* windown
+
 # 1. HOW TO USE
 1. `o_gui_impl` place in instances layer
 2. `o_gui_impl` adjust create order to top 

@@ -1,6 +1,20 @@
 # AGUI
-GAMEMAKER GUI框架
-
+    A GAMEMAKER GUI框架 
+---
+# SUPPORT
+* button
+* drag
+* scale
+* scrollbar
+* checkbox
+* grid
+* goods
+* input
+* selector
+* slider
+* tab
+* tree
+* windown
 
 # 1. 如何使用
 1. `o_gui_impl` 将o_gui_impl房子放在instance层
